@@ -101,6 +101,7 @@ main {
   width: 70px;
   height: 70px;
   cursor: pointer;
+  transition: all 100ms ease-in-out;
 }
 
 .choices > .choice:active {
@@ -110,6 +111,21 @@ main {
 .choices > .choice > img {
   width: 100%;
   height: 100%;
+}
+
+.choices > .choice.green-glow {
+  border-color: #22c55e;
+  box-shadow: 0 0 10px #16a34a;
+}
+
+.choices > .choice.red-glow {
+  border-color: #ef4444;
+  box-shadow: 0 0 10px #ef4444;
+}
+
+.choices > .choice.gray-glow {
+  border-color: #f1f5f9;
+  box-shadow: 0 0 10px #f1f5f9;
 }
 
 #action-message {

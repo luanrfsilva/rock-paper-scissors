@@ -18,20 +18,32 @@ function computer_choice() {
   return choice
 }
 
-function win() {
+function win(user_choice) {
   user_score++
   user_score_element.innerHTML = user_score
   result_element.innerHTML = '<p>You win!</p>'
+  document.getElementById(user_choice).classList.add('green-glow')
+  setTimeout(() => {
+    document.getElementById(user_choice).classList.remove('green-glow')
+  }, 500)
 }
 
-function lose() {
+function lose(user_choice) {
   computer_score++
   computer_score_element.innerHTML = computer_score
   result_element.innerHTML = '<p>You lose!</p>'
+  document.getElementById(user_choice).classList.add('red-glow')
+  setTimeout(() => {
+    document.getElementById(user_choice).classList.remove('red-glow')
+  }, 500)
 }
 
-function draw() {
+function draw(user_choice) {
   result_element.innerHTML = '<p>Its a draw!</p>'
+  document.getElementById(user_choice).classList.add('gray-glow')
+  setTimeout(() => {
+    document.getElementById(user_choice).classList.remove('gray-glow')
+  }, 500)
 }
 
 function game(user_choice) {
@@ -41,15 +53,15 @@ function game(user_choice) {
     case 'rock_scissors':
     case 'scissors_paper':
     case 'paper_rock':
-      win()
+      win(user_choice)
       break
     case 'scissors_rock':
     case 'paper_scissors':
     case 'rock_paper':
-      lose()
+      lose(user_choice)
       break
     default:
-      draw()
+      draw(user_choice)
       break
   }
 }
