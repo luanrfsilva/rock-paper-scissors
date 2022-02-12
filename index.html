@@ -10,29 +10,35 @@
   <body>
     <header><h1>Rock Paper Scissors</h1></header>
     <main>
-      <section class="score-board">
-        <div id="user-label" class="badge">user</div>
-        <div id="comp-label" class="badge">comp</div>
-        <span id="user-score">0</span> : <span id="comp-score">0</span>
+      <section class="score-board"><span id="user-score">0</span> : <span id="comp-score">0</span></section>
+
+      <section class="games">
+        <span>Games:</span>
+        <span id="total-games">0</span>
       </section>
 
       <section class="result">
-        <p>Paper covers rock. You win!</p>
+        <p>Start the game!</p>
       </section>
 
       <section class="choices">
-        <div class="choice">
+        <div class="choice" id="paper">
           <img src="images/paper.png" alt="Paper" />
         </div>
-        <div class="choice">
+        <div class="choice" id="rock">
           <img src="images/rock.png" alt="Rock" />
         </div>
-        <div class="choice">
+        <div class="choice" id="scissors">
           <img src="images/scissors.png" alt="Scissors" />
         </div>
       </section>
 
       <p id="action-message">Make your move.</p>
+
+      <section class="reset-game">
+        <button id="reset-game">Reset the game</button>
+      </section>
     </main>
+    <script src="app.js"></script>
   </body>
 </html>
